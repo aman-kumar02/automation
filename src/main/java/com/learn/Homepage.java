@@ -5,8 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Homepage extends BasePage{
 
-    private final By PRODUCTS = By.xpath("//button[contains(text(),\"Products\")]");
-    private final By CLOSE_POP_UP = By.cssSelector("button[id=\"close-button\"]");
+    private final By ABOUT = By.xpath("//a[contains(text(),\"About\")]");
 
     public Homepage(WebDriver driver){
         super(driver);
@@ -14,13 +13,10 @@ public class Homepage extends BasePage{
 
     @Override 
     public Boolean isPageLoaded(){
-        return driver.getTitle().contains("UKG"); 
+        return driver.getTitle().contains("Google"); 
     }
 
-    public void exploreProducts(){
-        if(isElementPresent(CLOSE_POP_UP)){
-            click(CLOSE_POP_UP);
-        }
-        click(PRODUCTS);
+    public void exploreAbout(){
+        click(ABOUT);
     }
 }

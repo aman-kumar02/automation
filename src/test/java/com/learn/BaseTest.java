@@ -17,14 +17,14 @@ public class BaseTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--disable-notifications");
         driver.set(new ChromeDriver(options));
-        driver.get().get("https://www.ukg.com");
+        driver.get().get("https://www.google.com");
     }
 
     @Test 
     public void loadtest(){
         Homepage page = new Homepage(driver.get());
         page.isPageLoaded();
-        page.exploreProducts();
+        page.exploreAbout();
     }
 
     @AfterMethod 
