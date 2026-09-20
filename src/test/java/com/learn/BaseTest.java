@@ -26,7 +26,7 @@ public class BaseTest {
         Homepage page = new Homepage(driver.get());
         Boolean loaded = page.isPageLoaded();
         Assert.assertTrue(loaded, "Homepage did not load successfully");
-        page.exploreAbout();
+        page.exploredAbout();
     }
 
     @AfterMethod 
