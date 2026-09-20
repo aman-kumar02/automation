@@ -16,11 +16,7 @@ public class Homepage extends BasePage{
         return driver.getTitle().contains("Google"); 
     }
 
-<<<<<<< HEAD
     public void clickAbout(){
-=======
-    public void exploredAbout(){
->>>>>>> main
         click(ABOUT);
     }
 }
