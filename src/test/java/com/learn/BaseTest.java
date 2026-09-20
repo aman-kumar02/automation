@@ -3,6 +3,7 @@ package com.learn;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +24,8 @@ public class BaseTest {
     @Test 
     public void loadtest(){
         Homepage page = new Homepage(driver.get());
-        page.isPageLoaded();
+        Boolean loaded = page.isPageLoaded();
+        Assert.assertTrue(loaded, "Homepage did not load successfully");
         page.exploreAbout();
     }
 
