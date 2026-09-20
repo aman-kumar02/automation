@@ -44,5 +44,14 @@ public abstract class BasePage{
         element.sendKeys(text);
     }
 
+    public Boolean isElementPresent(By locator){
+        try {
+            getWait().until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
     public abstract Boolean isPageLoaded();
 }

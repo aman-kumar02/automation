@@ -18,7 +18,9 @@ public class Homepage extends BasePage{
     }
 
     public void exploreProducts(){
-        click(CLOSE_POP_UP);
+        if(isElementPresent(CLOSE_POP_UP)){
+            click(CLOSE_POP_UP);
+        }
         click(PRODUCTS);
     }
 }
